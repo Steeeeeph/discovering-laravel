@@ -21,10 +21,12 @@ use Illuminate\Support\Facades\Route;
 //     return view('test');
 // });
 
-Route::get('/', function(){
-    $name = request('name');
+// Route::get('/', function(){
+//     $name = request('name');
 
-    return view('test', [
-        'name' => $name
-    ]);
-});
+//     return view('test', [
+//         'name' => $name
+//     ]);
+// });
+
+Route::get('/hello/{name}', 'App\Http\Controllers\HelloWorldController@show');
