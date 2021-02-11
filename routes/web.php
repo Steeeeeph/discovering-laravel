@@ -2,7 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\HelloWorldController;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\UserController;
+
+// Route::get('/post/create', [PostController::class, 'create']);
+// Route::post('/post', [PostController::class, 'store']);
 
 /*
 |--------------------------------------------------------------------------
@@ -14,16 +18,17 @@ use App\Http\Controllers\HelloWorldController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Route::get('/', [Controller::class, 'show']);
-Route::get('/', function () {
-    return view('helloWorld');
-});
+Route::get('/', [PageController::class, 'show']);
+
 Route::get('/login', function () {
     return view('login');
 });
 Route::get('/register', function () {
     return view('register');
 });
+
+Route::post('/register', [UserController::class, 'store']);
+
 // Route::get('/login', function(){
 //     return view('login');
 // });

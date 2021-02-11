@@ -9,4 +9,3 @@
         <a href="/register">Subscribe here!</a>
     </div>
 @endsection
-
