@@ -1,4 +1,4 @@
-@extends('components.layout')
+@extends('layout')
 
 @section('content')
     <div class="container">
@@ -8,5 +8,6 @@
         <h4>Are you in for this?</h4>
         <a href="/register">Subscribe here!</a>
     </div>
-@endsection
 
+
+@endsection

@@ -38,13 +38,14 @@ class UserController extends Controller
     public function store(Request $request)
     {
         // dump(request()->all());
-        // $request->validate([
-        //     'firstName' => ,
-        //     'lastName' => ,
-        //     'email' => ,
-        //     'phoneNumber' => ,
-        //     'password' => ,
-        // ]);
+        $request->validate([
+            'firstName' => ['required'],
+            'lastName' => ['required'],
+            'email' => ['required'],
+            'phoneNumber' => ['required'],
+            'password' => ['required'],
+        ]);
+
         $user = new User();
         $user->first_name = request('firstName');
         $user->last_name = request('lastName');
@@ -64,7 +65,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        if
+        return view('dashboard')
     }
 
     /**

@@ -23,11 +23,15 @@ Route::get('/', [PageController::class, 'show']);
 Route::get('/login', function () {
     return view('login');
 });
+Route::get('/login/dashboard/id={{$id}}', function (){
+    return view('dashboard');
+});
 Route::get('/register', function () {
     return view('register');
 });
 
 Route::post('/register', [UserController::class, 'store']);
+Route::get('/register', [UserController::class, 'store']);
 
 // Route::get('/login', function(){
 //     return view('login');

@@ -1,7 +1,7 @@
-@extends('components.layout')
+@extends('layout')
 
 @section('content')
-
+<div class="container">
     <div class="row justify-content-center align-items-center h-100 mt-5">
         <div class="col col-sm-6 col-md-6 col-lg-4 col-xl-3 ">
             <form class="form-signin " method="post" action="" >
@@ -27,6 +27,8 @@
             </form>
         </div>
     </div>
+
+</div>
 
 @endsection
 
